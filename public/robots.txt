@@ -1,0 +1,27 @@
+# Robots.txt for AD Hukuk ve Danışmanlık
+# https://adhukukvedanismanlik.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /uzmanlik/
+Allow: /blog/
+Allow: /images/
+Allow: /logo/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://adhukukvedanismanlik.com/sitemap.xml
+
+# Additional sitemaps (if you add them later)
+# Sitemap: https://adhukukvedanismanlik.com/blog-sitemap.xml
+# Sitemap: https://adhukukvedanismanlik.com/images-sitemap.xml
+
+
