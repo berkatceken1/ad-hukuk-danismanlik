@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import JsonLd from '../components/JsonLd';
 
 export const metadata: Metadata = {
     title: 'Uzmanlık Alanları - Av. Ali Deniz | Hukuk Danışmanlığı',
