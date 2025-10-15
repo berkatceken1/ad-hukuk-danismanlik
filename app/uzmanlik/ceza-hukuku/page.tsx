@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 export default function CezaHukukuPage() {
     return (
         <div className="min-h-screen bg-gray-50">
