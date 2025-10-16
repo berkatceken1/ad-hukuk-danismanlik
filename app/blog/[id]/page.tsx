@@ -1,15 +1,16 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '../posts';
 
-type Params = { params: { id: string } };
+type Params = { params: Promise<{ id: string }> };
 
 export function generateStaticParams() {
     return blogPosts.map(post => ({ id: String(post.id) }));
 }
 
-export default function BlogDetailPage({ params }: Params) {
-    const id = Number(params.id);
-    const post = blogPosts.find(p => p.id === id);
+export default async function BlogDetailPage({ params }: Params) {
+    const { id } = await params;
+    const numericId = Number(id);
+    const post = blogPosts.find(p => p.id === numericId);
     if (!post) return notFound();
 
     return (

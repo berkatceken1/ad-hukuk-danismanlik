@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 interface StructuredDataProps {
-    type: 'Organization' | 'Person' | 'LegalService' | 'BreadcrumbList' | 'WebPage';
+    type: 'Organization' | 'Person' | 'LegalService' | 'WebPage';
     data: any;
 }
 
@@ -93,7 +93,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
                                 "@type": "Offer",
                                 "itemOffered": {
                                     "@type": "Service",
-                                    "name": "İcra İflas",
+                                    "name": "İcra İflas Hukuku",
                                     "description": "Alacak takibi, icra takipleri ve iflas süreçleri"
                                 }
                             }
@@ -187,17 +187,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
                     }
                 };
 
-            case 'BreadcrumbList':
-                return {
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": data.breadcrumbs.map((item: any, index: number) => ({
-                        "@type": "ListItem",
-                        "position": index + 1,
-                        "name": item.name,
-                        "item": item.url
-                    }))
-                };
 
             default:
                 return {};

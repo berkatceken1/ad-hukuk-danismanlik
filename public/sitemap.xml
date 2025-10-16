@@ -5,19 +5,19 @@
     <loc>https://adhukukvedanismanlik.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/hakkimda/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/iletisim/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   
   <!-- Uzmanlık Alanları Ana Sayfa -->
@@ -25,7 +25,7 @@
     <loc>https://adhukukvedanismanlik.com/uzmanlik/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   
   <!-- Uzmanlık Alanları -->
@@ -33,73 +33,73 @@
     <loc>https://adhukukvedanismanlik.com/uzmanlik/ticaret-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/is-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/aile-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/ceza-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/gayrimenkul-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/icra-iflas/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/tuketici-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/vergi-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/sigorta-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/miras-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/borclar-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/uzmanlik/idare-hukuku/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   
   <!-- Blog -->
@@ -107,7 +107,63 @@
     <loc>https://adhukukvedanismanlik.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/5</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/6</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/7</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://adhukukvedanismanlik.com/blog/9</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-16</lastmod>
   </url>
   
   <!-- Yasal Sayfalar -->
@@ -115,13 +171,13 @@
     <loc>https://adhukukvedanismanlik.com/gizlilik/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
   <url>
     <loc>https://adhukukvedanismanlik.com/kullanim-kosullari/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2025-10-16</lastmod>
   </url>
 </urlset>
 

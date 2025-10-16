@@ -136,7 +136,7 @@ export default function UzmanlikPage() {
             ]
         },
         {
-            title: 'İcra İflas',
+            title: 'İcra İflas Hukuku',
             slug: 'icra-iflas',
             description: 'Alacak yönetimi, icra takipleri ve iflas süreçlerinde etkin ve hızlı sonuç.',
             icon: (
@@ -278,7 +278,7 @@ export default function UzmanlikPage() {
                             </div>
 
                             <div className="relative z-10 mt-6">
-                                <Link href={`/uzmanlik/${area.slug}`} className="inline-flex items-center text-primary hover:text-primary-dark font-semibold text-sm sm:text-base transition-all duration-300 group-hover:translate-x-1">
+                                <Link href={`/uzmanlik/${area.slug}`} prefetch={false} className="inline-flex items-center text-primary hover:text-primary-dark font-semibold text-sm sm:text-base transition-all duration-300 group-hover:translate-x-1">
                                     Detaylı Bilgi
                                     <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

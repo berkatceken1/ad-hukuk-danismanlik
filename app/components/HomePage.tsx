@@ -73,6 +73,7 @@ export default function HomePage() {
                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                                 <Link
                                     href="/iletisim"
+                                    prefetch={false}
                                     className="inline-flex items-center justify-center bg-accent text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-accent/90 transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base font-source-sans"
                                 >
                                     <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -82,6 +83,7 @@ export default function HomePage() {
                                 </Link>
                                 <Link
                                     href="/hakkimda"
+                                    prefetch={false}
                                     className="inline-flex items-center justify-center border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 backdrop-blur-sm text-sm sm:text-base font-source-sans"
                                 >
                                     <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -232,7 +234,7 @@ export default function HomePage() {
                                 )
                             },
                             {
-                                title: 'İcra İflas',
+                                title: 'İcra İflas Hukuku',
                                 slug: 'icra-iflas',
                                 description: 'Alacak takibi, icra takipleri ve iflas süreçleri',
                                 icon: (
@@ -255,6 +257,7 @@ export default function HomePage() {
                                     <p className="text-gray-600 mb-6 text-sm sm:text-base font-source-sans leading-relaxed">{area.description}</p>
                                     <Link
                                         href={`/uzmanlik/${area.slug}`}
+                                        prefetch={false}
                                         className="inline-flex items-center text-primary hover:text-primary-dark font-semibold text-sm sm:text-base font-source-sans transition-all duration-300 group-hover:translate-x-1"
                                     >
                                         Detaylı Bilgi
@@ -271,6 +274,7 @@ export default function HomePage() {
                     <div className="text-center mt-12">
                         <Link
                             href="/uzmanlik"
+                            prefetch={false}
                             className="inline-flex items-center bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-xl font-semibold hover:from-primary-light hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -286,7 +290,7 @@ export default function HomePage() {
             </section>
 
             {/* Hizmet Alanları */}
-            <section className="py-20 bg-white relative overflow-hidden">
+            <section className="py-16 sm:py-20 bg-white relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
                     <div className="absolute inset-0" style={{
@@ -295,11 +299,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                         {/* Sol taraf - Profesyonel Hukuk Fotoğrafı */}
-                        <div ref={imageRef} className="order-2 lg:order-1 animate-slide-in-left w-full">
+                        <div ref={imageRef} className="order-1 animate-slide-in-left w-full">
                             <div className="relative group">
-                                <div className="w-full h-[400px] sm:h-[500px] relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-3xl">
+                                <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] relative overflow-hidden rounded-2xl shadow-2xl transform transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-3xl">
                                     <Image
                                         src="/images/hukukgorsel.png"
                                         alt="Profesyonel Hukuk Ofisi - Adalet Terazisi ve Hukuk Kitapları"
@@ -317,68 +321,69 @@ export default function HomePage() {
                                 </div>
 
                                 {/* Floating Badge */}
-                                <div ref={badgeRef} className="absolute -bottom-4 -right-4 bg-white/98 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-gray-100/50 max-w-xs transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl animate-fade-in-up" style={{ transitionDelay: '0.5s' }}>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-lg">
-                                            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div ref={badgeRef} className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 bg-white/98 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100/50 max-w-xs transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl animate-fade-in-up" style={{ transitionDelay: '0.5s' }}>
+                                    <div className="flex items-center space-x-2 sm:space-x-3">
+                                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-lg">
+                                            <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                             </svg>
                                         </div>
                                         <div>
-                                            <div className="text-sm font-bold text-gray-900 font-playfair">Profesyonel</div>
+                                            <div className="text-xs sm:text-sm font-bold text-gray-900 font-playfair">Profesyonel</div>
                                             <div className="text-xs text-gray-600 font-source-sans">Hukuki Hizmet</div>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Decorative Elements */}
-                                <div className="absolute top-6 right-6 w-3 h-3 bg-accent/40 rounded-full animate-pulse"></div>
-                                <div className="absolute top-12 right-12 w-2 h-2 bg-primary/30 rounded-full"></div>
-                                <div className="absolute bottom-20 left-8 w-4 h-4 bg-accent/20 rounded-full"></div>
+                                <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-2 h-2 sm:w-3 sm:h-3 bg-accent/40 rounded-full animate-pulse"></div>
+                                <div className="absolute top-8 right-8 sm:top-12 sm:right-12 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary/30 rounded-full"></div>
+                                <div className="absolute bottom-16 left-6 sm:bottom-20 sm:left-8 w-3 h-3 sm:w-4 sm:h-4 bg-accent/20 rounded-full"></div>
                             </div>
                         </div>
 
                         {/* Sağ taraf - İçerik */}
-                        <div ref={contentRef} className="order-1 lg:order-2 animate-fade-in-up">
-                            <div className="space-y-8">
+                        <div ref={contentRef} className="order-2 animate-fade-in-up">
+                            <div className="space-y-4 md:space-y-6 lg:space-y-8">
                                 {/* Başlık Bölümü */}
                                 <div>
-                                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full mb-6 shadow-lg">
-                                        <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary to-primary-dark rounded-full mb-3 sm:mb-4 md:mb-6 shadow-lg">
+                                        <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                     </div>
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-playfair tracking-tight">
+                                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 font-playfair tracking-tight">
                                         Hukukun Her Alanında
-                                        <span className="block text-primary mt-2">Profesyonel Hizmet</span>
+                                        <span className="block text-primary mt-1 sm:mt-2">Profesyonel Hizmet</span>
                                     </h2>
                                 </div>
 
                                 {/* İçerik */}
-                                <div className="space-y-6">
-                                    <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-source-sans">
+                                <div className="space-y-3 sm:space-y-4 md:space-y-6">
+                                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-source-sans">
                                         AD HUKUK ve DANIŞMANLIK olarak; ceza hukuku, aile hukuku, iş ve sosyal güvenlik hukuku,
                                         ticaret hukuku, icra-iflas hukuku, gayrimenkul ve kira hukuku başta olmak üzere
                                         hukukun birçok alanında müvekkillerimize profesyonel destek sunmaktayız.
                                     </p>
 
-                                    <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-source-sans">
+                                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-source-sans">
                                         Her bir dava ve danışmanlık sürecinde, uzman deneyimimizle müvekkillerimizin
                                         ihtiyaçlarına özel çözümler geliştiriyor; haklarını en etkin şekilde korumayı amaçlıyoruz.
                                     </p>
                                 </div>
 
                                 {/* CTA Button */}
-                                <div className="pt-4">
+                                <div className="pt-2 sm:pt-3 md:pt-4">
                                     <Link
                                         href="/iletisim"
-                                        className="inline-flex items-center bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-xl font-semibold hover:from-primary-light hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
+                                        prefetch={false}
+                                        className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary-dark text-white px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-xl font-semibold hover:from-primary-light hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base md:text-lg"
                                     >
-                                        <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                         </svg>
                                         BİZE ULAŞIN
-                                        <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </Link>

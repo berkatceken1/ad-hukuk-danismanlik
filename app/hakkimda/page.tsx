@@ -44,23 +44,26 @@ export const metadata: Metadata = {
 
 export default function HakkimdaPage() {
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Ana İçerik */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Profil Fotoğrafı */}
-                    <div className="order-2 lg:order-1">
+                    <div className="order-1 lg:order-1">
                         <div className="relative">
-                            <div className="w-full h-[620px] sm:h-[680px] md:h-[720px] relative rounded-2xl shadow-2xl overflow-hidden">
-                                <Image
-                                    src="/images/alideniz2.jpg"
-                                    alt="Av. Ali Deniz - Profesyonel Portre"
-                                    fill
-                                    priority
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-                                    className="object-cover object-top"
-                                    style={{ objectPosition: 'center 35%' }}
-                                />
+                            <div className="w-full relative rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/5 bg-white">
+                                {/* Responsive aspect on small screens, fixed height on large for consistent layout */}
+                                <div className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto lg:h-[720px]">
+                                    <Image
+                                        src="/images/alideniz2.jpg"
+                                        alt="Av. Ali Deniz - Profesyonel Portre"
+                                        fill
+                                        priority
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                                        className="object-cover object-top"
+                                        style={{ objectPosition: 'center 35%' }}
+                                    />
+                                </div>
                             </div>
                             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-lg">
                                 <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -71,8 +74,8 @@ export default function HakkimdaPage() {
                     </div>
 
                     {/* Kurumsal Bilgiler */}
-                    <div className="order-1 lg:order-2">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">AD Hukuk ve Danışmanlık</h2>
+                    <div className="order-2 lg:order-2">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-6">AD Hukuk ve Danışmanlık</h2>
                         <div className="space-y-6">
                             <div className="flex items-start">
                                 <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
@@ -82,7 +85,7 @@ export default function HakkimdaPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Kuruluş</h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 leading-relaxed">
                                         2022 yılında Kayseri’de faaliyete başlayan ofisimiz, hukuki süreçlerde hız, doğruluk ve
                                         şeffaflığı esas alarak müvekkil memnuniyetini en üst seviyede tutmayı amaçlar.
                                     </p>
@@ -97,7 +100,7 @@ export default function HakkimdaPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Yaklaşım</h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 leading-relaxed">
                                         Kaliteli hizmetin yanında, müvekkillerimizin sektörel ve özel ihtiyaçlarına özgü yenilikçi
                                         çözümler üretir; doktrinsel ve güncel içtihat araştırmalarını titizlikle yürütürüz.
                                     </p>
@@ -112,7 +115,7 @@ export default function HakkimdaPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Hizmet Kapsamı</h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 leading-relaxed">
                                         Uzman kadromuz ile dava, sözleşme ve danışmanlık başta olmak üzere ulusal ve
                                         uluslararası ölçekte tüm hukuki taleplere yanıt verir; süreçleri şeffaf ve
                                         etkin biçimde yönetiriz.
@@ -128,7 +131,7 @@ export default function HakkimdaPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Eğitim ve Kariyer</h3>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 leading-relaxed">
                                         Avukat Ali Deniz, 1999 yılında İzmir Bornova’da dünyaya gelmiştir. Aslen Nevşehir Kapadokyalıdır. Ortaöğrenimini Kayseri Lisesi’nde, lisans eğitimini ise Doğu Akdeniz Üniversitesi Hukuk Fakültesi’nde tamamlamıştır. AD Hukuk ve Danışmanlık bürosunun kurucu avukatı olan Ali Deniz, hâlen Kayseri'de mesleğini icra etmektedir.
                                     </p>
                                 </div>
@@ -136,40 +139,39 @@ export default function HakkimdaPage() {
                         </div>
                     </div>
 
-                    {/* Misyon ve Vizyon */}
-                    <div className="mt-20">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="bg-white rounded-lg shadow-lg p-8">
-                                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                                    <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Misyonumuz</h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    Hızlı, doğru ve kalıcı hukuki çözümler üretmek; müvekkillerimizin haklarını etkin biçimde
-                                    korumak ve her aşamada şeffaf iletişimle güven tesis etmek. Sonuç odaklı ve titiz çalışma
-                                    disiplinini standart hâline getirmek.
-                                </p>
+                </div>
+                {/* Misyon ve Vizyon */}
+                <div className="mt-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                                <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
                             </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Misyonumuz</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Hızlı, doğru ve kalıcı hukuki çözümler üretmek; müvekkillerimizin haklarını etkin biçimde
+                                korumak ve her aşamada şeffaf iletişimle güven tesis etmek. Sonuç odaklı ve titiz çalışma
+                                disiplinini standart hâline getirmek.
+                            </p>
+                        </div>
 
-                            <div className="bg-white rounded-lg shadow-lg p-8">
-                                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-6">
-                                    <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Vizyonumuz</h3>
-                                <p className="text-gray-600 leading-relaxed">
-                                    Ulusal ve uluslararası alanda, etik ilkelere bağlı kalarak yenilikçi ve vizyoner yaklaşımıyla
-                                    sektöründe öncü bir hukuk ofisi olmak; teknolojiyi ve güncel içtihatları etkin kullanarak
-                                    hizmet kalitesini sürekli yükseltmek.
-                                </p>
+                        <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                            <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-6">
+                                <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
                             </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Vizyonumuz</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Ulusal ve uluslararası alanda, etik ilkelere bağlı kalarak yenilikçi ve vizyoner yaklaşımıyla
+                                sektöründe öncü bir hukuk ofisi olmak; teknolojiyi ve güncel içtihatları etkin kullanarak
+                                hizmet kalitesini sürekli yükseltmek.
+                            </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

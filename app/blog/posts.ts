@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
         id: 4,
         title: 'İcra Takibinde Yapılması Gerekenler',
         excerpt: 'Alacaklarınızın tahsili için icra takibi sürecinde dikkat edilmesi gereken noktalar.',
-        category: 'İcra İflas',
+        category: 'İcra İflas Hukuku',
         image: '/images/icra1.jpg',
         lead:
             'Takip türünün doğru seçimi ve sürelerin yönetimi, tahsilat başarısını doğrudan etkiler.',

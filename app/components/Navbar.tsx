@@ -30,6 +30,7 @@ export default function Navbar() {
                                     width={60}
                                     height={60}
                                     className="object-contain transition-transform duration-300 group-hover:scale-110"
+                                    style={{ width: 'auto', height: 'auto' }}
                                 />
                             </div>
                         </Link>
@@ -74,6 +75,7 @@ export default function Navbar() {
                                     width={56}
                                     height={56}
                                     className="object-contain transition-transform duration-300 group-hover:scale-110"
+                                    style={{ width: 'auto', height: 'auto' }}
                                 />
                             </div>
                         </Link>

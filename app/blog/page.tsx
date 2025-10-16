@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blogPosts } from './posts';
@@ -10,6 +10,38 @@ export default function BlogPage() {
     const [selectedCategory, setSelectedCategory] = useState<string>('Tümü');
     const [currentPage, setCurrentPage] = useState<number>(1);
     const perPage = 6;
+    const gridTopRef = useRef<HTMLDivElement | null>(null);
+
+    const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+    const getHeaderOffset = () => (window.innerWidth < 640 ? 88 : 96);
+    const animateScrollTo = (targetTop: number, duration = 700) => {
+        const start = window.scrollY;
+        const distance = targetTop - start;
+        const startTime = performance.now();
+        const step = (now: number) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(1, elapsed / duration);
+            const eased = easeInOutCubic(progress);
+            window.scrollTo(0, start + distance * eased);
+            if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+
+    const scrollToGridTop = () => {
+        if (typeof window === 'undefined') return;
+        const anchor = gridTopRef.current;
+        if (!anchor) return;
+        const headerOffset = getHeaderOffset();
+        const top = anchor.getBoundingClientRect().top + window.scrollY - headerOffset;
+        animateScrollTo(top, 700);
+    };
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+        // ensure scroll after state updates in the next frame
+        requestAnimationFrame(scrollToGridTop);
+    };
 
     const categories = useMemo(() => {
         const set = new Set<string>(blogPosts.map(p => p.category));
@@ -58,7 +90,7 @@ export default function BlogPage() {
                             return (
                                 <button
                                     key={category}
-                                    onClick={() => { setSelectedCategory(category); setCurrentPage(1); }}
+                                    onClick={() => { setSelectedCategory(category); setCurrentPage(1); requestAnimationFrame(scrollToGridTop); }}
                                     className={`px-6 py-2 rounded-full font-medium transition-colors ${active ? 'bg-primary text-white' : 'bg-white text-gray-700 hover:bg-primary hover:text-white shadow-md'}`}
                                 >
                                     {category}
@@ -69,7 +101,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* Blog Yazıları */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div ref={gridTopRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {paginatedPosts.map((post) => (
                         <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                             {/* Blog Görseli */}
@@ -127,7 +159,7 @@ export default function BlogPage() {
                 {/* Sayfalama */}
                 <div className="mt-12 flex justify-center">
                     <nav className="flex items-center space-x-2">
-                        <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <button aria-label="Önceki sayfa" onClick={() => handlePageChange(Math.max(1, currentPage - 1))} disabled={currentPage === 1} className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                             </svg>
@@ -136,10 +168,10 @@ export default function BlogPage() {
                             const page = i + 1;
                             const active = page === currentPage;
                             return (
-                                <button key={page} onClick={() => setCurrentPage(page)} className={`px-4 py-2 rounded-md ${active ? 'bg-primary text-white' : 'text-gray-700 hover:bg-gray-100'}`}>{page}</button>
+                                <button aria-current={active ? 'page' : undefined} key={page} onClick={() => handlePageChange(page)} className={`px-4 py-2 rounded-md ${active ? 'bg-primary text-white' : 'text-gray-700 hover:bg-gray-100'}`}>{page}</button>
                             );
                         })}
-                        <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <button aria-label="Sonraki sayfa" onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))} disabled={currentPage === totalPages} className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
