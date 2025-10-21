@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import HomePage from './components/HomePage';
 
 export const metadata: Metadata = {
-  title: "Av. Ali Deniz - AD Hukuk ve Danışmanlık | Kayseri Avukat",
+  title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
   description: "Avukat Ali Deniz ile profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku, ceza hukuku ve daha fazlası için uzman avukat. Kayseri merkezli hukuk bürosu.",
   keywords: [
     "Ali Deniz avukat",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "hukuk bürosu"
   ],
   openGraph: {
-    title: "Av. Ali Deniz - AD Hukuk ve Danışmanlık | Kayseri Avukat",
+    title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
     description: "Profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku ve daha fazlası için uzman avukat.",
     type: "website",
     locale: "tr_TR",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Av. Ali Deniz - AD Hukuk ve Danışmanlık",
+    title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
     description: "Profesyonel hukuki danışmanlık hizmetleri. Kayseri merkezli uzman avukat.",
     images: ["/images/alideniz1.jpg"],
   },

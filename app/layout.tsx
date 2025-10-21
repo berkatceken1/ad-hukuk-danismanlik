@@ -39,8 +39,18 @@ const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID || "";
 
 export const metadata: Metadata = {
   title: {
-    default: "Av. Ali Deniz - AD Hukuk ve Danışmanlık | Kayseri Avukat",
-    template: "%s | Av. Ali Deniz - AD Hukuk ve Danışmanlık"
+    default: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
+    template: "%s | Avukat Ali Deniz - AD Hukuk ve Danışmanlık"
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/favicon.ico', sizes: '180x180' }
+    ]
   },
   description: "Avukat Ali Deniz ile profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku, ceza hukuku ve daha fazlası için uzman avukat. Kayseri merkezli hukuk bürosu.",
   keywords: [
@@ -83,15 +93,16 @@ export const metadata: Metadata = {
     "dava takibi",
     "hukuk ofisi"
   ],
-  authors: [{ name: "Av. Ali Deniz" }],
-  creator: "Av. Ali Deniz",
+  authors: [{ name: "Avukat Ali Deniz" }],
+  creator: "Avukat Ali Deniz",
   publisher: "AD Hukuk ve Danışmanlık",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
   },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Av. Ali Deniz - AD Hukuk ve Danışmanlık | Kayseri Avukat",
+    title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
     description: "Profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku ve daha fazlası için uzman avukat.",
     type: "website",
     locale: "tr_TR",
@@ -108,7 +119,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Av. Ali Deniz - AD Hukuk ve Danışmanlık",
+    title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
     description: "Profesyonel hukuki danışmanlık hizmetleri. Kayseri merkezli uzman avukat.",
     images: ["/images/alideniz1.jpg"],
   },

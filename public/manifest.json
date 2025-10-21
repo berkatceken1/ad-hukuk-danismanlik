@@ -1,0 +1,16 @@
+{
+    "name": "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
+    "short_name": "AD Hukuk",
+    "description": "Profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku ve daha fazlası için uzman avukat.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#dc2626",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "16x16 32x32 48x48",
+            "type": "image/x-icon"
+        }
+    ]
+}
