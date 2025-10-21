@@ -152,6 +152,9 @@ export default function RootLayout({
         {gaMeasurementId ? (
           <GoogleAnalytics measurementId={gaMeasurementId} />
         ) : null}
+        {googleVerification && (
+          <meta name="google-site-verification" content={googleVerification} />
+        )}
       </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${sourceSans.variable} font-sans antialiased`}
