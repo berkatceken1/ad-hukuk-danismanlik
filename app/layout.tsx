@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StructuredData from "./components/StructuredData";
-import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,7 +34,6 @@ const sourceSans = Source_Sans_3({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://adhukukvedanismanlik.com";
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "";
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID || "";
 
 export const metadata: Metadata = {
   title: {
@@ -149,9 +147,6 @@ export default function RootLayout({
       <head>
         <StructuredData type="Organization" data={{}} />
         <StructuredData type="Person" data={{}} />
-        {gaMeasurementId ? (
-          <GoogleAnalytics measurementId={gaMeasurementId} />
-        ) : null}
         {googleVerification && (
           <meta name="google-site-verification" content={googleVerification} />
         )}

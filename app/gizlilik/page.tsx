@@ -36,7 +36,7 @@ export default function GizlilikPage() {
                     </p>
                     <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">ÇEREZLER (COOKIE)</h2>
                     <p>
-                        Firmamız, "cookie" içerisinde size gönderilmiş olan orijinal bilgiler haricinde, işbu web sitesinin kullanımını kolaylaştırmak amacıyla "cookie"ler kullanmaktadır. "Cookie"ler, web sayfalarının devamlı kullanıcıları tanımasına ve kullanıcıların siteye girişlerini kolaylaştırmasına imkan sağlar; sitelerin içeriklerini iyileştirmek amacıyla toplu verilerin derlenmesine yardımcı olur. Sitemizdeki "cookie"ler kişisel bilgileri saklamaz ve ifşa etmez; promosyon veya pazarlama amacıyla kullanılmaz. Tarayıcı ayarlarınızdan çerezleri yönetebilir veya engelleyebilirsiniz. Ancak bazı çerezler sitenin düzgün çalışması için gerekli olabilir.
+                        Sitede yalnızca sitenin çalışması için gerekli zorunlu teknik çerezler kullanılmaktadır; analitik veya pazarlama amaçlı çerez kullanmıyoruz. Tarayıcı ayarlarınızdan çerezleri yönetebilir veya engelleyebilirsiniz.
                     </p>
                     <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">İlgili Kişi Hakları</h2>
                     <p>
