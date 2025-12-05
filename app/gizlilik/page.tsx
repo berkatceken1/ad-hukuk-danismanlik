@@ -32,7 +32,7 @@ export default function GizlilikPage() {
                     </p>
                     <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">Toplanan Kişisel Veriler</h2>
                     <p>
-                        Tarafınıza ait kişisel bilgiler, ad, soyad, TC kimlik numarası gibi kimlik bilgileri, aile durum bilgileri, hesap bilgileri, IP, telefon ve adres bilgileri, ses vb. belirlenebilir olmanızı sağlayacak her türlü bilgiyi ifade etmektedir. Kişisel verileriniz yasal olarak aktarılması gereken ulusal ve uluslararası yetkili otoritelere/ mercilere, idari ve resmi makamlara, ulusal ve uluslararası mevzuatın ve sözleşmelerin öngördüğü yurtiçi – yurtdışı tüm gerçek ve tüzel kişilere, hukuki zorunluluklar nedeniyle ve yasal sınırlamalar çerçevesinde bağımsız denetim şirketlerine ve üçüncü kişilere aktarılabilecektir.
+                        Bu sitede form üzerinden veri toplanmamaktadır. Telefon veya e-posta yoluyla bize ilettiğiniz ad, soyad, iletişim bilgileri ve talep içeriği; ayrıca güvenlik ve altyapı logları kapsamında IP ve tarayıcı/cihaz bilgileri işlenebilir. Harita bileşenleri (Google Maps) üçüncü taraf çerezleri kullanabilir; tarayıcı ayarlarınızdan yönetebilirsiniz. Toplanan veriler yasal yükümlülükler çerçevesinde yetkili mercilere ve hizmet aldığımız tedarikçilere aktarılabilir.
                     </p>
                     <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-3">ÇEREZLER (COOKIE)</h2>
                     <p>
