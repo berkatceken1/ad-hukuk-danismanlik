@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-    title: 'Uzmanlık Alanları - Av. Ali Deniz | Hukuk Danışmanlığı',
+    title: 'Çalışma Alanları - Av. Ali Deniz | Hukuk Danışmanlığı',
     description: 'Ticaret hukuku, iş hukuku, aile hukuku, ceza hukuku, gayrimenkul hukuku ve daha fazlası. Av. Ali Deniz\'in uzmanlık alanlarını keşfedin. Profesyonel hukuki danışmanlık hizmetleri.',
     keywords: [
         'uzmanlık alanları',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         'deneyimli avukat Kayseri'
     ],
     openGraph: {
-        title: 'Uzmanlık Alanları - Av. Ali Deniz',
+        title: 'Çalışma Alanları - Av. Ali Deniz',
         description: 'Ticaret hukuku, iş hukuku, aile hukuku ve daha fazlası. Av. Ali Deniz\'in uzmanlık alanlarını keşfedin.',
         type: 'website',
         locale: 'tr_TR',
@@ -250,7 +250,7 @@ export default function UzmanlikPage() {
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Uzmanlık Alanları */}
+            {/* Çalışma Alanları */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {expertiseAreas.map((area, index) => (
