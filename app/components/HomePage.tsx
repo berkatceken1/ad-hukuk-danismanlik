@@ -343,22 +343,19 @@ export default function HomePage() {
                                         </svg>
                                     </div>
                                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 font-playfair tracking-tight">
-                                        Hukukun Her Alanında
-                                        <span className="block text-primary mt-1 sm:mt-2">Profesyonel Hizmet</span>
+                                        Danışmanlık ve Dava Takibinde
+                                        <span className="block text-primary mt-1 sm:mt-2">Deneyimli Destek</span>
                                     </h2>
                                 </div>
 
                                 {/* İçerik */}
                                 <div className="space-y-3 sm:space-y-4 md:space-y-6">
                                     <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-source-sans">
-                                        AD HUKUK ve DANIŞMANLIK olarak; ceza hukuku, aile hukuku, iş ve sosyal güvenlik hukuku,
-                                        ticaret hukuku, icra-iflas hukuku, gayrimenkul ve kira hukuku başta olmak üzere
-                                        hukukun birçok alanında müvekkillerimize profesyonel destek sunmaktayız.
+                                        Hukukun farklı alanlarında bireysel ve kurumsal müvekkillerimize danışmanlık ve temsil hizmeti veriyoruz.
                                     </p>
 
                                     <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-source-sans">
-                                        Her bir dava ve danışmanlık sürecinde, uzman deneyimimizle müvekkillerimizin
-                                        ihtiyaçlarına özel çözümler geliştiriyor; haklarını en etkin şekilde korumayı amaçlıyoruz.
+                                        Dava veya danışmanlık sürecinizin her aşamasında sizi bilgilendiriyor; doğru strateji ve zamanında adım atmanız için yanınızda oluyoruz.
                                     </p>
                                 </div>
 
