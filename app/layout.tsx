@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StructuredData from "./components/StructuredData";
+import RouteTransitionLoader from "./components/RouteTransitionLoader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -156,6 +157,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Navbar />
+        <RouteTransitionLoader />
         <main>
           {children}
         </main>
