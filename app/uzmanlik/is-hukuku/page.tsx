@@ -16,7 +16,6 @@ export default function IsHukukuPage() {
             <section className="py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="space-y-6">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 font-playfair">Uzmanlık Özeti</h2>
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-source-sans">
                             Kıdem/ihbar tazminatları, fazla mesai, işe iade, iş kazası ve mobbing iddiaları
                             gibi başlıklarda hak kaybı yaşanmaması için proaktif değerlendirme ve dava stratejisi oluşturuyoruz.
@@ -25,6 +24,7 @@ export default function IsHukukuPage() {
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Arabuluculuk başvurusu ve süreç yönetimi</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Tazminat ve alacak davaları</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />İşe iade davaları ve icrası</li>
+                            <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />İş kazası</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />İç yönerge ve sözleşme revizyonları</li>
                         </ul>
                     </div>
@@ -33,5 +33,4 @@ export default function IsHukukuPage() {
         </div>
     );
 }
-
 

@@ -16,13 +16,13 @@ export default function TicaretHukukuPage() {
             <section className="py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="space-y-6">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 font-playfair">Uzmanlık Özeti</h2>
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-source-sans">
                             Ticaret hukuku kapsamında şirketlerin kuruluşundan günlük operasyonel sözleşmelerine,
                             yönetim kurulu karar süreçlerinden uyuşmazlıkların etkin çözümüne kadar uçtan uca hizmet sunuyoruz.
                             Sözleşmelerin risk analizini yapıyor, müzakere ve revizyon süreçlerini yönetiyoruz.
                         </p>
                         <ul className="space-y-3 text-gray-700 text-base sm:text-lg font-source-sans">
+                        <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Şirketlere hukuki danışmanlık</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Şirket kuruluş ve ana sözleşme hazırlığı</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Hisse devirleri, yatırım sözleşmeleri</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Tedarik, çerçeve ve distribütörlük sözleşmeleri</li>
@@ -34,5 +34,4 @@ export default function TicaretHukukuPage() {
         </div>
     );
 }
-
 

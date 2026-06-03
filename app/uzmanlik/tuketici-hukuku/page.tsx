@@ -15,7 +15,6 @@ export default function TuketiciHukukuPage() {
             <section className="py-12 sm:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="space-y-6">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 font-playfair">Uzmanlık Özeti</h2>
                         <p className="text-gray-700 leading-relaxed text-base sm:text-lg font-source-sans">
                             Ayıplı mal ve hizmetlerden doğan iade/bedel iadesi süreçleri, hakem heyeti başvuruları ve
                             tüketici mahkemesi davalarında hızlı ve etkin temsil sağlıyoruz.
@@ -32,5 +31,4 @@ export default function TuketiciHukukuPage() {
         </div>
     );
 }
-
 

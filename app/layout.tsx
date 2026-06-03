@@ -99,7 +99,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  manifest: "/manifest.json",
   openGraph: {
     title: "Avukat Ali Deniz - AD Hukuk ve Danışmanlık",
     description: "Profesyonel hukuki danışmanlık hizmetleri. Ticaret hukuku, iş hukuku, aile hukuku ve daha fazlası için uzman avukat.",
