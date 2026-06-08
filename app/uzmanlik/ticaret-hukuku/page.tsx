@@ -22,7 +22,7 @@ export default function TicaretHukukuPage() {
                             Sözleşmelerin risk analizini yapıyor, müzakere ve revizyon süreçlerini yönetiyoruz.
                         </p>
                         <ul className="space-y-3 text-gray-700 text-base sm:text-lg font-source-sans">
-                        <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Şirket ve ticari işletmelere hukuki danışmanlık hizmeti</li>
+                        <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Şirketlere ve ticari işletmelere hukuki danışmanlık hizmeti</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Şirket kuruluş ve ana sözleşme hazırlığı</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Hisse devirleri, yatırım sözleşmeleri</li>
                             <li className="flex items-start"><span className="mt-2 mr-3 h-2 w-2 rounded-full bg-primary" />Tedarik, çerçeve ve distribütörlük sözleşmeleri</li>
