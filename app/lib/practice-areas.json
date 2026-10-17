@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "ticaret-hukuku",
+    "title": "Ticaret Hukuku",
+    "icon": "business",
+    "summary": "Şirketler, ticari sözleşmeler ve kurumsal hukuki danışmanlık.",
+    "description": "Şirket kuruluşu, birleşme-devralma, pay devirleri ve ticari sözleşmeler başta olmak üzere, işletmelerin tüm hukuki süreçlerinde hızlı ve güvenilir danışmanlık.",
+    "paragraphs": [
+      "Ticaret hukuku kapsamında şirketlerin kuruluşundan günlük operasyonel sözleşmelerine, yönetim kurulu karar süreçlerinden uyuşmazlıkların etkin çözümüne kadar uçtan uca hizmet sunuyoruz. Sözleşmelerin risk analizini yapıyor, müzakere ve revizyon süreçlerini yönetiyoruz."
+    ],
+    "points": [
+      "Şirketlere ve ticari işletmelere hukuki danışmanlık hizmeti",
+      "Şirket kuruluş ve ana sözleşme hazırlığı",
+      "Hisse devirleri, yatırım sözleşmeleri",
+      "Tedarik, çerçeve ve distribütörlük sözleşmeleri",
+      "Ticari alacakların tahsili ve uyuşmazlık yönetimi"
+    ]
+  },
+  {
+    "slug": "is-hukuku",
+    "title": "İş Hukuku",
+    "icon": "work",
+    "summary": "İşçi ve işveren ilişkileri, iş uyuşmazlıkları ve arabuluculuk.",
+    "description": "İşçi-işveren ilişkilerinden doğan uyuşmazlıkların önlenmesi ve çözümünde stratejik danışmanlık; dava ve arabuluculuk süreçlerinde etkin temsil.",
+    "paragraphs": [
+      "Kıdem/ihbar tazminatları, fazla mesai, işe iade, iş kazası ve mobbing iddiaları gibi başlıklarda hak kaybı yaşanmaması için proaktif değerlendirme ve dava stratejisi oluşturuyoruz."
+    ],
+    "points": [
+      "Arabuluculuk başvurusu ve süreç yönetimi",
+      "Tazminat ve alacak davaları",
+      "İşe iade davaları ve icrası",
+      "İş kazası",
+      "İç yönerge ve sözleşme revizyonları"
+    ]
+  },
+  {
+    "slug": "aile-hukuku",
+    "title": "Aile Hukuku",
+    "icon": "family",
+    "summary": "Boşanma, velayet, nafaka ve mal rejimine ilişkin süreçler.",
+    "description": "Boşanma, velayet, nafaka ve mal rejimi konularında hassas, çözüm odaklı ve hak temelli yaklaşım.",
+    "paragraphs": [
+      "Aile içi uyuşmazlıklarda süreci gereksiz biçimde uzatmadan, müvekkil lehine sürdürülebilir çözümler üretmeye ve hak kayıplarını önlemeye odaklanırız. Çocuk üstün yararı ilkesini merkeze alırız."
+    ],
+    "points": [
+      "Anlaşmalı/çekişmeli boşanma ve protokol hazırlığı",
+      "Velayet, kişisel ilişki ve nafaka talepleri",
+      "Mal rejimi tasfiyesi ve katkı payı alacağı",
+      "6284 kapsamında koruyucu tedbirler"
+    ]
+  },
+  {
+    "slug": "ceza-hukuku",
+    "title": "Ceza Hukuku",
+    "icon": "scale",
+    "summary": "Soruşturma ve kovuşturma aşamalarında savunma ve temsil.",
+    "description": "Soruşturma ve kovuşturma aşamalarında etkin savunma, baştan sona stratejik dava yönetimi ve hakların korunması.",
+    "paragraphs": [
+      "Hukuk büromuz, müvekkillerine soruşturma aşamasından itibaren ihtiyaç duyulan her türlü avukatlık ve danışmanlık hizmetini sağlamaktadır. Hukuk büromuz, soruşturma ve dava öncesinden soruşturma ve davaların yürütülmesi ile infaz aşamasına kadar, cezai yaptırım riski olan tüm iş ve işlemlere dair danışmanlık hizmeti vermektedir."
+    ],
+    "points": []
+  },
+  {
+    "slug": "gayrimenkul-hukuku",
+    "title": "Gayrimenkul Hukuku",
+    "icon": "home",
+    "summary": "Tapu, kira, taşınmaz işlemleri ve mülkiyet uyuşmazlıkları.",
+    "description": "Tapu işlemleri, kira sözleşmeleri, projeler ve uyuşmazlıklarda hızlı ve güvenli çözümler.",
+    "paragraphs": [
+      "Hukuk büromuz, gayrimenkul proje geliştirme süreçlerinde uzmanlaşmış olup; mülkiyet sahipleri ve yatırımcılara, mülkiyetin devri ve yönetimi konularında danışmanlık sunmanın yanı sıra emlak alım‑satımı, kiralama, ayni ve şahsi hak tesisi gibi işlemlerin planlanması, hazırlanması ve bu işlemlere ilişkin müzakerelerin yürütülmesi hususunda kapsamlı birikime sahiptir. Gayrimenkul alanındaki müvekkil portföyümüz, yabancı ve yerli çok sayıda yatırımcıdan oluşmaktadır."
+    ],
+    "points": [
+      "Kira sözleşmesi ve tahliye süreçleri",
+      "Tapu iptali ve tescil davaları",
+      "Kat karşılığı inşaat sözleşmeleri",
+      "Aidat ve yönetim planı uyuşmazlıkları"
+    ]
+  },
+  {
+    "slug": "icra-iflas",
+    "title": "İcra ve İflas",
+    "icon": "document",
+    "summary": "Alacakların takibi, icra işlemleri ve iflas süreçleri.",
+    "description": "Alacak yönetimi, icra takipleri ve iflas süreçlerinde hızlı, etkin ve sonuç odaklı hizmet.",
+    "paragraphs": [
+      "İlamsız ve ilamlı icra takipleri, itirazın iptali/kaldırılması, haciz ve satış süreçlerinde hızlı aksiyon ve etkin tahsilat stratejileri geliştiriyoruz."
+    ],
+    "points": [
+      "Ödeme emri, itiraz ve şikayet süreçleri",
+      "Haciz, sıra cetveli ve satış işlemleri",
+      "İflas erteleme ve konkordato danışmanlığı",
+      "Çek, senet ve fatura alacakları takibi"
+    ]
+  },
+  {
+    "slug": "miras-hukuku",
+    "title": "Miras Hukuku",
+    "icon": "education",
+    "summary": "Tereke, vasiyetname, miras paylaşımı ve miras davaları.",
+    "description": "Tereke, saklı pay, vasiyet ve paylaşım süreçlerinde haklarınızı koruyarak süreci etkin yönetiyoruz.",
+    "paragraphs": [
+      "Veraset ilamı ve tereke tespitinden başlayarak mirasın reddi/kabulü, paylaşım, tenkis ve iptal davaları dahil tüm aşamalarda kapsamlı danışmanlık ve temsil sunuyoruz."
+    ],
+    "points": [
+      "Mirasın reddi/kabulü ve tereke tespiti",
+      "Miras paylaşımı ve izale‑i şuyu",
+      "Tenkis/iptal davaları, saklı pay",
+      "Vasiyetname düzenleme, iptal ve tenfiz"
+    ]
+  },
+  {
+    "slug": "sigorta-hukuku",
+    "title": "Sigorta Hukuku",
+    "icon": "shield",
+    "summary": "Poliçe, teminat, tazminat talepleri ve sigorta uyuşmazlıkları.",
+    "description": "Poliçe teminatları, tazminat talepleri ve rücu davalarında profesyonel destek sunuyoruz.",
+    "paragraphs": [
+      "Zarar tespiti, eksper süreçleri ve teminat dışı itirazların yönetiminde haklarınızı güçlü biçimde savunuruz."
+    ],
+    "points": [
+      "Tazminat talepleri ve hesaplamaları",
+      "Poliçe yorumları ve teminat kapsamı",
+      "Rücu ve halefiyet davaları",
+      "Eksper ve bilirkişi süreç yönetimi"
+    ]
+  },
+  {
+    "slug": "borclar-hukuku",
+    "title": "Borçlar Hukuku",
+    "icon": "document",
+    "summary": "Sözleşmeler, tazminat ve borç ilişkilerinden doğan uyuşmazlıklar.",
+    "description": "Sözleşmeler, haksız fiil ve sebepsiz zenginleşmeden doğan uyuşmazlıklarda etkin temsil sunuyoruz.",
+    "paragraphs": [
+      "Sözleşme hazırlama, yorum ve müzakere süreçlerinin yanı sıra haksız fiil tazminatları, sebepsiz zenginleşme ve temerrüt/ifa ihtilaflarında kapsamlı destek veriyoruz."
+    ],
+    "points": [
+      "Sözleşme hazırlama, yorum ve müzakere",
+      "Haksız fiil kaynaklı tazminat davaları",
+      "Sebepsiz zenginleşme uyuşmazlıkları",
+      "Temerrüt ve ifa süreç yönetimi"
+    ]
+  },
+  {
+    "slug": "tuketici-hukuku",
+    "title": "Tüketici Hukuku",
+    "icon": "shopping",
+    "summary": "Ayıplı mal ve hizmetler, tüketici başvuruları ve sözleşmeler.",
+    "description": "Ayıplı mal/hizmet, mesafeli sözleşmeler ve abonelik işlemlerinde tüketici haklarınızı koruyoruz.",
+    "paragraphs": [
+      "Ayıplı mal ve hizmetlerden doğan iade/bedel iadesi süreçleri, hakem heyeti başvuruları ve tüketici mahkemesi davalarında hızlı ve etkin temsil sağlıyoruz."
+    ],
+    "points": [
+      "Ayıplı mal/hizmet uyuşmazlıkları",
+      "Tüketici hakem heyeti başvuruları",
+      "Mesafeli sözleşme ve iade süreçleri",
+      "Abonelik ve haksız şart itirazları"
+    ]
+  },
+  {
+    "slug": "idare-hukuku",
+    "title": "İdare Hukuku",
+    "icon": "business",
+    "summary": "İdari işlemler, kamu sözleşmeleri ve idari yargı süreçleri.",
+    "description": "İdari işlemlere karşı iptal/tam yargı davaları ve ihale-ruhsat süreçlerinde temsil sağlıyoruz.",
+    "paragraphs": [
+      "İdari işlemlerin hukuka uygunluk denetiminde, süre ve usul güvenceleri çerçevesinde etkili başvuru ve dava stratejileri geliştiriyoruz."
+    ],
+    "points": [
+      "İptal ve tam yargı davaları",
+      "İhale ve kamu sözleşmeleri",
+      "Ruhsat/izin işlemleri ve itirazlar",
+      "Disiplin ve memur işlemleri"
+    ]
+  },
+  {
+    "slug": "vergi-hukuku",
+    "title": "Vergi Hukuku",
+    "icon": "money",
+    "summary": "Vergi uyuşmazlıkları, idari başvurular ve yargısal süreçler.",
+    "description": "Vergi tarhiyatları, uzlaşma, yapılandırma ve dava süreçlerinde stratejik temsil sağlıyoruz.",
+    "paragraphs": [
+      "İdari aşamadan yargı süreçlerine kadar vergi uyuşmazlıklarında risk analizi yapar; uzlaşma ve dava stratejilerini kurumunuz lehine kurgularız."
+    ],
+    "points": [
+      "Vergi ve ceza ihbarnameleri itirazı",
+      "Uzlaşma ve yapılandırma başvuruları",
+      "Vergi mahkemesi ve istinaf/temyiz",
+      "İdari inceleme süreç danışmanlığı"
+    ]
+  }
+]
