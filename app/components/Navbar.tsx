@@ -1,148 +1,136 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { navigation, office } from "../lib/site";
+import Icon from "./ui/Icon";
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
-    const navigation = [
-        { name: 'Ana Sayfa', href: '/' },
-        { name: 'Hakkımızda', href: '/hakkimda' },
-        { name: 'Çalışma Alanları', href: '/uzmanlik' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'İletişim', href: '/iletisim' },
-    ];
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+    const onResize = () => {
+      if (window.innerWidth >= 1000) setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [menuOpen]);
 
-    return (
-        <nav className="bg-gradient-to-r from-primary-dark via-primary to-primary-light backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-white/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Desktop Header */}
-                <div className="hidden md:flex justify-between items-center h-16">
-                    {/* Logo */}
-                    <div className="flex-shrink-0">
-                        <Link
-                            href="/"
-                            className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                        >
-                            <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 hover:scale-105">
-                                <Image
-                                    src="/logo/ad-hukuk-logo.png"
-                                    alt="AD Hukuk ve Danışmanlık Logo"
-                                    width={60}
-                                    height={60}
-                                    className="object-contain transition-transform duration-300"
-                                    style={{ width: 'auto', height: 'auto' }}
-                                />
-                            </div>
-                        </Link>
-                    </div>
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-white/90 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 relative group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                                >
-                                    <span className="relative z-10">{item.name}</span>
-                                    <div className="absolute inset-0 bg-white/10 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className="hidden md:block">
-                        <a
-                            href="tel:+905451569613"
-                            className="bg-accent text-primary px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent/90 transition-[background-color,box-shadow,transform] duration-300 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark motion-safe:hover:-translate-y-0.5 active:translate-y-0"
-                        >
-                            +90 545 156 96 13
-                        </a>
-                    </div>
-                </div>
-
-                {/* Mobile Header */}
-                <div className="flex md:hidden items-center h-16">
-                    {/* Logo - Left */}
-                    <div className="flex-shrink-0">
-                        <Link
-                            href="/"
-                            className="flex items-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            <div className="w-14 h-14 flex items-center justify-center transition-transform duration-300 hover:scale-105">
-                                <Image
-                                    src="/logo/ad-hukuk-logo.png"
-                                    alt="AD Hukuk ve Danışmanlık Logo"
-                                    width={56}
-                                    height={56}
-                                    className="object-contain transition-transform duration-300"
-                                    style={{ width: 'auto', height: 'auto' }}
-                                />
-                            </div>
-                        </Link>
-                    </div>
-
-                    {/* Phone Number - Center */}
-                    <div className="flex-1 flex justify-center">
-                        <a
-                            href="tel:+905451569613"
-                            className="bg-accent text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-accent/90 transition-[background-color,box-shadow] duration-300 shadow-lg hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                        >
-                            +90 545 156 96 13
-                        </a>
-                    </div>
-
-                    {/* Mobile menu button - Right */}
-                    <div className="flex-shrink-0">
-                        <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="text-white hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark transition-colors duration-300 p-2 rounded-lg hover:bg-white/10"
-                            aria-label="Menüyü Aç/Kapat"
-                            aria-controls="mobile-navigation"
-                            aria-expanded={isMenuOpen}
-                        >
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                {isMenuOpen ? (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                ) : (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                )}
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Mobile Navigation */}
-                {isMenuOpen && (
-                    <div id="mobile-navigation" className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary-dark/95 backdrop-blur-md rounded-xl mt-2 border border-white/10 shadow-xl">
-                            {navigation.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-white hover:text-accent block px-3 py-2 rounded-md text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
-                            <a
-                                href="tel:+905451569613"
-                                className="bg-accent text-primary block px-4 py-3 rounded-lg text-base font-semibold hover:bg-accent/90 mt-4 shadow-lg transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                +90 545 156 96 13
-                            </a>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </nav>
-    );
+  return (
+    <>
+      <div className="utility-bar">
+        <div className="container utility-content">
+          <a
+            className="utility-email"
+            href={`mailto:${office.email}`}
+            aria-label={`E-posta: ${office.email}`}
+          >
+            <Icon name="mail" />
+            <span className="utility-email-full">{office.email}</span>
+            <span className="utility-email-short">E-posta</span>
+          </a>
+          <a href={office.phoneHref}>
+            <Icon name="phone" />
+            {office.phone}
+          </a>
+        </div>
+      </div>
+      <header className="site-header">
+        <div className="container header-content">
+          <Link
+            className="brand-link"
+            href="/"
+            aria-label="AD Hukuk ve Danışmanlık — Ana sayfa"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Image
+              src="/logo/ad-hukuk-logo.png"
+              alt="AD Hukuk ve Danışmanlık"
+              width={291}
+              height={275}
+              sizes="(max-width: 760px) 56px, 66px"
+              className="original-navbar-logo"
+              priority
+            />
+          </Link>
+          <nav className="desktop-nav" aria-label="Ana menü">
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <a
+            className="button button-primary header-cta"
+            href={office.phoneHref}
+            aria-label="Randevu Al — telefonla arayın"
+          >
+            Randevu Al
+            <Icon name="phone" />
+          </a>
+          <button
+            ref={toggleRef}
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <Icon name={menuOpen ? "close" : "menu"} />
+          </button>
+        </div>
+        {menuOpen && (
+          <nav
+            id="mobile-navigation"
+            className="mobile-nav"
+            aria-label="Mobil menü"
+          >
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                {item.label}
+                <Icon name="external" />
+              </Link>
+            ))}
+            <a
+              className="mobile-phone mobile-appointment"
+              href={office.phoneHref}
+              aria-label="Randevu Al — telefonla arayın"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Icon name="phone" />
+              Randevu Al
+            </a>
+          </nav>
+        )}
+      </header>
+    </>
+  );
 }

@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AD Hukuk ve Danışmanlık
 
-## Getting Started
+Av. Ali Deniz’in Kayseri merkezli hukuk bürosu için Next.js 15, React 19 ve Tailwind CSS 4 ile geliştirilmiş kurumsal web sitesi.
 
-First, run the development server:
+## Yerel çalışma
 
-```bash
+Node.js 20.9 veya daha yeni bir sürüm kullanın. Depodaki `package-lock.json` ile kurulum yapın:
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Geliştirme önizlemesi: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Üretim kontrolü ve önizlemesi:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm start
+```
 
-## Learn More
+Üretim sunucusu da http://localhost:3000 adresinde açılır. Aynı portu kullanan geliştirme sunucusunu önce durdurun.
 
-To learn more about Next.js, take a look at the following resources:
+## İçerik ve bileşenler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/lib/site.ts`: ortak iletişim bilgileri, gezinme bağlantıları ve çalışma ilkeleri.
+- `app/lib/practice-areas.json`: 12 çalışma alanının başlıkları ve ortak verileri.
+- `app/lib/practice-details.ts`: detay sayfalarının kısa tanıtım metinleri.
+- `app/lib/presentation.ts`: çalışma alanı fotoğrafları ve kart özetleri.
+- `app/blog/posts.ts`: mevcut makale içerikleri.
+- `app/components/ui/`: marka, simgeler, düğmeler ve iç sayfa başlıkları.
+- `app/components/PracticeDetail.tsx`: çalışma alanlarının ortak sayfa şablonu.
+- `app/globals.css`: renk, tipografi, yerleşim ve ekran boyutu kuralları.
+- `app/sitemap.ts`, `app/robots.ts`: içerikle birlikte oluşturulan arama motoru dosyaları.
+- `docs/TASARIM-PLANI.md`: referans incelemesi, tasarım kararları ve kapsam.
+- `docs/FOTOGRAF-DUZENLEME.md`: GPT Images portre çıktıları ve uygulanan talimatlar.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ana sayfa ve Hakkımızda portresi `public/images/alideniz.png` dosyasını kullanır. Önceki portreler kullanıcı tarafından kaldırılmıştır; fotoğraf düzenleme belgeleri yalnızca tasarım sürecinin geçmiş kaydıdır.
 
-## Deploy on Vercel
+Ana sayfa ve çalışma alanları sunucu bileşenleriyle oluşturulur. Mobil menü, makale filtreleri ve sayfalama için istemci bileşenleri kullanılır. İletişim telefon, e-posta ve harita üzerinden sağlanır.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Ortam değişkenleri
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`.env.example` dosyasını `.env.local` adıyla kopyalayın. Varsayılan site adresi `https://adhukukvedanismanlik.com` olarak tanımlıdır. Farklı bir alan adına dağıtım yaparken `NEXT_PUBLIC_SITE_URL` değerini güncelleyin. Google doğrulama kodu isteğe bağlıdır.
+
+## Dağıtım
+
+Vercel üzerinde Next.js projesi olarak dağıtılabilir. `npm run build` üretim derlemesini oluşturur. Git push işlemi, uzak deponun dağıtım ayarlarına bağlı olarak yayını tetikleyebilir.

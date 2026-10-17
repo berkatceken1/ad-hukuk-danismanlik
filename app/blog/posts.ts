@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
         title: 'Şirket Kuruluşu: Hangi Şirket Türü Sizin İçin Uygun?',
         excerpt: 'Girişimciler için şirket türleri, avantajları ve kuruluş süreçleri hakkında rehber.',
         category: 'Ticaret Hukuku',
-        image: '/images/sirket1.jpg',
+        image: '/images/sirket2.jpg',
         lead:
             'Anonim ve limited şirket arasında seçim yaparken sermaye ihtiyacı, pay devri esnekliği ve yatırım planları birlikte değerlendirilmelidir.',
         content:
