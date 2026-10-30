@@ -6,7 +6,6 @@ import PracticeGrid from "./PracticeGrid";
 import ArticleCard from "./ArticleCard";
 import ScrollReveal from "./ScrollReveal";
 import ContactSection from "./ContactSection";
-import { principles } from "../lib/site";
 import portrait from "../../public/images/alideniz.png";
 
 export default function HomePage() {
@@ -111,36 +110,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section
-        className="principles-section section-pad home-principles"
-        aria-labelledby="principles-heading"
-      >
-        <div className="container principles-stack-layout">
-          <div className="principles-stack-intro">
-            <p className="eyebrow">
-              <span className="eyebrow-line" />
-              NASIL ÇALIŞIRIZ
-            </p>
-            <h2 id="principles-heading">Çalışma ilkelerimiz.</h2>
-          </div>
-          <ol className="principles-stack">
-            {principles.map((principle, index) => (
-              <li
-                className="principle-card"
-                key={principle.title}
-                style={{ "--card-index": index } as React.CSSProperties}
-              >
-                <span className="principle-number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3>{principle.title}</h3>
-                <p>{principle.text}</p>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
 

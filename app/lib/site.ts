@@ -19,18 +19,3 @@ export const navigation = [
   { href: "/blog", label: "Makaleler" },
   { href: "/iletisim", label: "İletişim" },
 ];
-
-export const principles = [
-  {
-    title: "Özenli inceleme",
-    text: "Her dosyayı kendi koşulları içinde ele alır, hukuki seçenekleri ayrıntılı olarak değerlendiririz.",
-  },
-  {
-    title: "Açık iletişim",
-    text: "Sürecin aşamalarını, olası riskleri ve izlenecek yolu anlaşılır bir dille paylaşırız.",
-  },
-  {
-    title: "Mesleki gizlilik",
-    text: "Paylaşılan bilgi ve belgeleri, meslek sırrı ve mahremiyet ilkeleriyle koruruz.",
-  },
-];

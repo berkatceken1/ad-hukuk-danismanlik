@@ -26,7 +26,7 @@ npm start
 
 ## İçerik ve bileşenler
 
-- `app/lib/site.ts`: ortak iletişim bilgileri, gezinme bağlantıları ve çalışma ilkeleri.
+- `app/lib/site.ts`: ortak iletişim bilgileri ve gezinme bağlantıları.
 - `app/lib/practice-areas.json`: 12 çalışma alanının başlıkları ve ortak verileri.
 - `app/lib/practice-details.ts`: detay sayfalarının kısa tanıtım metinleri.
 - `app/lib/presentation.ts`: çalışma alanı fotoğrafları ve kart özetleri.
