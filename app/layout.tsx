@@ -7,11 +7,20 @@ import StructuredData from "./components/StructuredData";
 import RouteTransitionLoader from "./components/RouteTransitionLoader";
 
 const editorial = Lora({
-  style: ["normal", "italic"],
+  style: "normal",
   variable: "--font-editorial",
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
   display: "swap",
+});
+// Italic is decorative, below the fold: keep its files out of critical preloads.
+const editorialItalic = Lora({
+  style: "italic",
+  variable: "--font-editorial-italic",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  preload: false,
 });
 const interfaceFont = Manrope({
   variable: "--font-interface",
@@ -72,7 +81,7 @@ export default function RootLayout({
         <StructuredData type="Person" data={{}} />
       </head>
       <body
-        className={`${editorial.variable} ${interfaceFont.variable}`}
+        className={`${editorial.variable} ${editorialItalic.variable} ${interfaceFont.variable}`}
         suppressHydrationWarning
       >
         <a className="skip-link" href="#icerik">

@@ -30,12 +30,15 @@ export default function PracticeGrid({
           key={area.slug}
           href={`/uzmanlik/${area.slug}`}
         >
-          <div className="practice-overview-photo">
+          <div
+            className="practice-overview-photo"
+            data-scroll-reveal={compact || undefined}
+          >
             <Image
               src={practicePresentation[area.slug].image}
               alt=""
               fill
-              sizes="(max-width: 760px) 80px, 112px"
+              sizes="(max-width: 760px) 80px, (max-width: 1200px) 96px, 112px"
             />
           </div>
           <div className="practice-overview-copy">

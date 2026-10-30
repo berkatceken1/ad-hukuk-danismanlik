@@ -4,6 +4,8 @@ import Icon from "./ui/Icon";
 import ButtonLink from "./ui/ButtonLink";
 import PracticeGrid from "./PracticeGrid";
 import ArticleCard from "./ArticleCard";
+import ScrollReveal from "./ScrollReveal";
+import portrait from "../../public/images/alideniz.png";
 
 export default function HomePage() {
   const featuredPosts = [2, 6, 3].map((id) =>
@@ -12,6 +14,7 @@ export default function HomePage() {
 
   return (
     <div className="home-page">
+      <ScrollReveal />
       <section className="home-hero" aria-labelledby="hero-heading">
         <div className="container hero-layout">
           <div className="hero-copy">
@@ -29,12 +32,13 @@ export default function HomePage() {
           <div className="hero-visual hero-visual-portrait">
             <div className="hero-image">
               <Image
-                src="/images/alideniz.png"
+                src={portrait}
                 alt="Av. Ali Deniz"
                 fill
-                quality={95}
-                sizes="(max-width: 760px) 90vw, 420px"
+                quality={85}
+                sizes="(max-width: 472px) calc(100vw - 52px), 420px"
                 priority
+                fetchPriority="high"
               />
               <span className="image-corner" />
             </div>
@@ -82,7 +86,7 @@ export default function HomePage() {
       >
         <div className="container">
           <div className="office-introduction">
-            <div className="office-introduction-image">
+            <div className="office-introduction-image" data-scroll-reveal>
               <Image
                 src="/images/hukuki-calisma-masasi.webp"
                 alt="Açık kitap, dolma kalem ve adalet terazisinden oluşan temsili hukuk çalışma masası"

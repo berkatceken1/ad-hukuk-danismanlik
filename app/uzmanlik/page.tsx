@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageIntro from "../components/ui/PageIntro";
 import PracticeGrid from "../components/PracticeGrid";
 import areas from "../lib/practice-areas.json";
+import ConsultationBanner from "../components/ConsultationBanner";
 
 const pageOrder: Record<string, string> = {
   "ticaret-hukuku": "ceza-hukuku",
@@ -32,6 +33,7 @@ export default function PracticePage() {
       >
         <PracticeGrid items={pageAreas} />
       </section>
+      <ConsultationBanner />
     </>
   );
 }

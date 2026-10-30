@@ -37,6 +37,14 @@ export default async function BlogDetailPage({ params }: Params) {
   const { id } = await params;
   const post = blogPosts.find((item) => String(item.id) === id);
   if (!post) notFound();
+  const relatedPosts = [
+    ...blogPosts.filter(
+      (item) => item.id !== post.id && item.category === post.category,
+    ),
+    ...blogPosts.filter(
+      (item) => item.id !== post.id && item.category !== post.category,
+    ),
+  ].slice(0, 3);
   return (
     <article className="container section-pad blog-detail">
       <Link href="/blog" className="blog-back">
@@ -48,43 +56,69 @@ export default async function BlogDetailPage({ params }: Params) {
         <h1>{post.title}</h1>
         <p className="blog-detail-lead">{post.lead}</p>
       </header>
-      <div className="blog-detail-image">
-        <Image
-          src={articleImage(post.category, post.image)}
-          alt=""
-          fill
-          sizes="(max-width: 900px) 100vw, 850px"
-          priority
-        />
-      </div>
-      <div className="article-body">
-        {post.content.split("\n\n").map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </div>
-      <div className="article-author">
-        <Image
-          className="article-author-logo"
-          src="/logo/ad-hukuk-logo.png"
-          alt=""
-          width={48}
-          height={45}
-        />
-        <div>
-          <strong>Av. Ali Deniz</strong>
-          <span>AD Hukuk ve Danışmanlık</span>
+      <div className="article-reading-layout">
+        <div className="article-reading-content">
+          <div className="blog-detail-image">
+            <Image
+              src={articleImage(post.category, post.image)}
+              alt=""
+              fill
+              sizes="(max-width: 999px) 90vw, 820px"
+              priority
+            />
+          </div>
+          <div className="article-body">
+            {post.content.split("\n\n").map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="article-author">
+            <Image
+              className="article-author-logo"
+              src="/logo/ad-hukuk-logo.png"
+              alt=""
+              width={48}
+              height={45}
+            />
+            <div>
+              <strong>Av. Ali Deniz</strong>
+              <span>AD Hukuk ve Danışmanlık</span>
+            </div>
+          </div>
+          <div className="article-note">
+            <Icon name="document" />
+            <p>
+              Bu yazı genel bilgilendirme amacı taşır. Somut olayınıza ilişkin
+              hukuki değerlendirme için doğrudan görüşme planlayabilirsiniz.
+            </p>
+          </div>
+          <ButtonLink href="/iletisim" variant="outline">
+            İletişime geçin
+          </ButtonLink>
         </div>
+        <aside
+          className="article-reading-sidebar"
+          aria-labelledby="related-articles-heading"
+        >
+          <p className="eyebrow">OKUMAYA DEVAM EDİN</p>
+          <h2 id="related-articles-heading">Diğer yazılar</h2>
+          <nav aria-label="İlgili makaleler">
+            {relatedPosts.map((item) => (
+              <Link href={`/blog/${item.id}`} key={item.id}>
+                <span>
+                  <small>{item.category}</small>
+                  {item.title}
+                </span>
+                <Icon name="arrow" />
+              </Link>
+            ))}
+          </nav>
+          <Link href="/blog" className="article-sidebar-all">
+            Tüm makaleler
+            <Icon name="arrow" />
+          </Link>
+        </aside>
       </div>
-      <div className="article-note">
-        <Icon name="document" />
-        <p>
-          Bu yazı genel bilgilendirme amacı taşır. Somut olayınıza ilişkin
-          hukuki değerlendirme için doğrudan görüşme planlayabilirsiniz.
-        </p>
-      </div>
-      <ButtonLink href="/iletisim" variant="outline">
-        İletişime geçin
-      </ButtonLink>
     </article>
   );
 }

@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     // unoptimized: true,  // Vercel için kapatıldı
     formats: ['image/webp', 'image/avif'], // Modern image formats
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    imageSizes: [32, 48, 64, 80, 96, 112, 128, 160, 192, 224, 256, 384, 420, 512],
   },
   trailingSlash: true,  // SEO için daha iyi
   // skipTrailingSlashRedirect: true,  // Vercel için gerekli değil

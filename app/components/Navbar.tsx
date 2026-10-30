@@ -11,22 +11,23 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     if (!menuOpen) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(false);
-        toggleRef.current?.focus();
-      }
-    };
+    const drawer = drawerRef.current;
+    const trigger = toggleRef.current;
+    drawer?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const onResize = () => {
       if (window.innerWidth >= 1000) setMenuOpen(false);
     };
-    document.addEventListener("keydown", onKeyDown);
     window.addEventListener("resize", onResize);
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
+      drawer?.close();
+      document.body.style.overflow = previousOverflow;
+      trigger?.focus();
       window.removeEventListener("resize", onResize);
     };
   }, [menuOpen]);
@@ -70,6 +71,9 @@ export default function Navbar() {
               className="original-navbar-logo"
               priority
             />
+            <span className="navigation-brand-name">
+              AD Hukuk<span>ve Danışmanlık</span>
+            </span>
           </Link>
           <nav className="desktop-nav" aria-label="Ana menü">
             {navigation.map((item) => (
@@ -102,10 +106,51 @@ export default function Navbar() {
             <Icon name={menuOpen ? "close" : "menu"} />
           </button>
         </div>
-        {menuOpen && (
+      </header>
+      <dialog
+        ref={drawerRef}
+        className="navigation-drawer"
+        aria-labelledby="menu-title"
+        onCancel={() => setMenuOpen(false)}
+        onKeyDown={(event) => {
+          if (event.key !== "Tab") return;
+          const controls = event.currentTarget.querySelectorAll<HTMLElement>(
+            "a[href], button, select, [tabindex='0']",
+          );
+          const first = controls[0];
+          const last = controls[controls.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last?.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first?.focus();
+          }
+        }}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setMenuOpen(false);
+        }}
+      >
+        <div className="drawer-panel">
+          <div className="drawer-heading">
+            <div>
+              <p className="eyebrow">AD HUKUK VE DANIŞMANLIK</p>
+              <h2 id="menu-title" className="sr-only">
+                Site gezinmesi
+              </h2>
+            </div>
+            <button
+              type="button"
+              className="drawer-close"
+              aria-label="Menüyü kapat"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Icon name="close" />
+            </button>
+          </div>
           <nav
             id="mobile-navigation"
-            className="mobile-nav"
+            className="drawer-navigation"
             aria-label="Mobil menü"
           >
             {navigation.map((item) => (
@@ -115,12 +160,15 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
-                {item.label}
-                <Icon name="external" />
+                <span>{item.label}</span>
+                <Icon name="arrow" />
               </Link>
             ))}
+          </nav>
+          <div className="drawer-contact">
+            <p className="eyebrow">GÖRÜŞME PLANLAYIN</p>
             <a
-              className="mobile-phone mobile-appointment"
+              className="button button-primary drawer-appointment"
               href={office.phoneHref}
               aria-label="Randevu Al — telefonla arayın"
               onClick={() => setMenuOpen(false)}
@@ -128,9 +176,14 @@ export default function Navbar() {
               <Icon name="phone" />
               Randevu Al
             </a>
-          </nav>
-        )}
-      </header>
+            <a className="drawer-email" href={`mailto:${office.email}`}>
+              {office.email}
+              <Icon name="external" />
+            </a>
+            <p className="drawer-location">{office.city}</p>
+          </div>
+        </div>
+      </dialog>
     </>
   );
 }

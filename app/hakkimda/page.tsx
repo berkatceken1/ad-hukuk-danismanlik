@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageIntro eyebrow="Hakkımızda" title="Hakkımızda" />
       <section className="container section-pad about-story">
         <AttorneyPortrait />
-        <div>
+        <div className="about-biography">
           <p className="eyebrow">KAYSERİ BAROSU</p>
           <h2>Av. Ali Deniz</h2>
           <p>

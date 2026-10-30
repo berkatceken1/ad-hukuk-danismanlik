@@ -18,6 +18,7 @@ export default function ArticleCard({
         className="article-card-image"
         tabIndex={-1}
         aria-hidden="true"
+        data-scroll-reveal={compact || undefined}
       >
         <Image
           src={articleImage(post.category, post.image)}
