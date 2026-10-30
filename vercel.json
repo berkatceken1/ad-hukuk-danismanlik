@@ -2,12 +2,12 @@
     "redirects": [
         {
             "source": "/uzmanlik-alanlari",
-            "destination": "/uzmanlik",
+            "destination": "/calisma-alanlari/",
             "permanent": true
         },
         {
             "source": "/hizmetler",
-            "destination": "/uzmanlik",
+            "destination": "/calisma-alanlari/",
             "permanent": true
         }
     ]

@@ -15,7 +15,7 @@ export const office = {
 export const navigation = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/hakkimda", label: "Hakkımızda" },
-  { href: "/uzmanlik", label: "Çalışma Alanları" },
+  { href: "/calisma-alanlari", label: "Çalışma Alanları" },
   { href: "/blog", label: "Makaleler" },
   { href: "/iletisim", label: "İletişim" },
 ];

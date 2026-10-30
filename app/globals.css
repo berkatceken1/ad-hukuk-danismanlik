@@ -3685,15 +3685,6 @@ main > .container.section-pad {
   .practice-related { padding: 22px 18px; }
   .practice-related-links { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: no-preference) {
-  /* Small thumbnails use a short entrance; the curtain belongs to larger photos. */
-  .home-page .practice-overview-photo[data-reveal-state] { transition-duration: 260ms, 480ms; }
-  .home-page .practice-overview-photo[data-reveal-state]::after { display: none; }
-  .home-page .practice-overview-photo[data-reveal-state="pending"] { transform: translateY(12px); }
-  .home-page .practice-overview-photo[data-reveal-state="pending"] img { transform: scale(1.035); }
-  .home-page .practice-overview-photo[data-reveal-state] img { transition-duration: 650ms; }
-}
-
 /* Inner-page editorial system: consistent cards, reading measures and navigation. */
 .site-header .menu-toggle { width: 44px; height: 44px; padding: 0; }
 .drawer-heading { min-height: 76px; padding-bottom: 24px; }
@@ -3798,4 +3789,211 @@ main > .container.section-pad {
   .legal-navigation { padding: 20px 16px; }
   .legal-navigation nav a { font-size: 11px; padding: 12px 10px; }
   .legal-document h2 { font-size: 23px; }
+}
+
+/* ------------------------------------------------------------------
+   Ana sayfa: çalışma ilkeleri (üst üste binen kartlar) ve kapanış
+   ------------------------------------------------------------------ */
+.home-principles {
+  border-top: 1px solid #d5ddd3;
+  border-bottom: 1px solid #d5ddd3;
+}
+.principles-stack-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 72px;
+  align-items: start;
+}
+.principles-stack-intro {
+  position: sticky;
+  top: 150px;
+}
+.principles-stack-intro h2 {
+  margin: 0;
+}
+.principles-stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 22vh;
+}
+.principle-card {
+  --card-index: 0;
+  position: sticky;
+  top: calc(140px + var(--card-index) * 26px);
+  min-height: 230px;
+  padding: 34px 38px 36px;
+  background: var(--surface-raised);
+  border: 1px solid #d5ddd3;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px -30px rgb(48 43 41 / 0.45);
+}
+.principle-card .principle-number {
+  display: block;
+  font:
+    italic 30px/1 var(--font-editorial-italic),
+    Georgia,
+    serif;
+  color: var(--accent);
+}
+.principle-card h3 {
+  font-size: 25px;
+  margin: 22px 0 12px;
+}
+.principle-card p {
+  max-width: 460px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-body);
+}
+@media (max-width: 999px) {
+  .principles-stack-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .principles-stack-intro {
+    position: static;
+  }
+  .principles-stack {
+    gap: 14vh;
+  }
+}
+@media (max-width: 760px) {
+  .principle-card {
+    top: calc(110px + var(--card-index) * 18px);
+    min-height: 0;
+    padding: 26px 24px 28px;
+  }
+  .principle-card h3 {
+    font-size: 22px;
+    margin-top: 18px;
+  }
+}
+
+/* Makale okuma ilerlemesi: yalnızca destekleyen tarayıcılarda görünür. */
+.reading-progress {
+  display: none;
+}
+
+/* ------------------------------------------------------------------
+   Kaydırmaya bağlı efektler (CSS scroll-driven animations)
+   Desteklemeyen tarayıcılarda (ör. Firefox kararlı) hiçbir kural
+   uygulanmaz; sayfa sabit ve tamamen görünür kalır. Yalnızca
+   transform/opacity kullanılır.
+   ------------------------------------------------------------------ */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* 1. Üst menü ilk 160 px'de gölgelenir, logo hafifçe küçülür. */
+    .site-header,
+    .original-navbar-logo {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll(root);
+      animation-range: 0 160px;
+    }
+    .site-header {
+      animation-name: header-settle;
+    }
+    .original-navbar-logo {
+      animation-name: logo-settle;
+      transform-origin: left center;
+    }
+
+    /* 2. Açılış bölümünden çıkarken katman hissi. */
+    .home-page .hero-copy,
+    .home-page .hero-image img,
+    .home-page .hero-image-caption {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll(root);
+      animation-range: 0 70vh;
+    }
+    .home-page .hero-copy {
+      animation-name: hero-copy-out;
+    }
+    .home-page .hero-image img {
+      animation-name: hero-portrait-drift;
+    }
+    .home-page .hero-image-caption {
+      animation-name: hero-caption-lift;
+    }
+
+    /* 3. Pirinç çizgiler göründükçe soldan sağa çizilir. */
+    .eyebrow-line {
+      transform-origin: left center;
+      animation: line-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 30%;
+    }
+
+    /* 4. Büro fotoğrafı çerçevesinin içinde yavaşça kayar.
+       Bu animasyon, ScrollReveal'ın görsel yakınlaştırmasının yerini alır;
+       perde efekti olduğu gibi kalır. */
+    .home-page .office-introduction-image {
+      overflow: clip;
+      view-timeline: --office-photo block;
+    }
+    .home-page .office-introduction-image img {
+      animation: office-photo-pan linear both;
+      animation-timeline: --office-photo;
+      animation-range: cover;
+    }
+
+    /* 5. İletişim satırları sırayla yerine oturur. */
+    .home-page .contact-links > a {
+      animation: contact-row-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+
+    /* Makale sayfası okuma çubuğu. */
+    .reading-progress {
+      display: block;
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 60;
+      height: 3px;
+      background: var(--primary);
+      transform-origin: left center;
+      pointer-events: none;
+      animation: reading-progress linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+
+@keyframes header-settle {
+  to {
+    border-bottom-color: transparent;
+    box-shadow: 0 10px 28px -18px rgb(61 8 8 / 0.35);
+  }
+}
+@keyframes logo-settle {
+  to { transform: scale(0.86); }
+}
+@keyframes hero-copy-out {
+  to { opacity: 0.35; transform: translateY(-36px); }
+}
+@keyframes hero-portrait-drift {
+  to { transform: scale(1.05); }
+}
+@keyframes hero-caption-lift {
+  to { transform: translateY(-24px); }
+}
+@keyframes line-draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes office-photo-pan {
+  from { transform: scale(1.1) translateY(-3%); }
+  to { transform: scale(1.1) translateY(3%); }
+}
+@keyframes contact-row-in {
+  from { transform: translateX(-14px); }
+  to { transform: none; }
+}
+@keyframes reading-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }

@@ -47,6 +47,7 @@ export default async function BlogDetailPage({ params }: Params) {
   ].slice(0, 3);
   return (
     <article className="container section-pad blog-detail">
+      <div className="reading-progress" aria-hidden="true" />
       <Link href="/blog" className="blog-back">
         <Icon name="previous" />
         Tüm makalelere dön
