@@ -3944,7 +3944,8 @@ main > .container.section-pad {
     .home-page .contact-links > a {
       animation: contact-row-in linear both;
       animation-timeline: view();
-      animation-range: entry 0% cover 28%;
+      /* Satır ekrana tamamen girdiğinde yerine oturmuş olur. */
+      animation-range: entry 0% entry 100%;
     }
 
     /* Makale sayfası okuma çubuğu. */
