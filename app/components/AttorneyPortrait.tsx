@@ -1,10 +1,11 @@
 import Image from "next/image";
+import portrait from "../../public/images/alideniz.png";
 
 export default function AttorneyPortrait() {
   return (
     <figure className="attorney-portrait">
       <Image
-        src="/images/alideniz.png"
+        src={portrait}
         alt="Av. Ali Deniz"
         width={1086}
         height={1448}
@@ -13,7 +14,7 @@ export default function AttorneyPortrait() {
           objectFit: "contain",
           objectPosition: "center",
         }}
-        quality={95}
+        quality={85}
         sizes="(max-width: 760px) 90vw, 400px"
       />
       <figcaption>

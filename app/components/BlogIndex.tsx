@@ -39,8 +39,25 @@ export default function BlogIndex() {
       className="container section-pad publication-index"
       aria-label="Makaleler"
     >
-      <div className="blog-toolbar">
+      <aside className="blog-toolbar" aria-label="Makale konuları">
         <p className="filter-label">KONUYA GÖRE İNCELEYİN</p>
+        <h2 className="topic-heading">Hukuka dair</h2>
+        <label className="mobile-topic-select">
+          Konu seçin
+          <select
+            value={category}
+            onChange={(event) => {
+              setCategory(event.target.value);
+              setPage(1);
+            }}
+          >
+            {categories.map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </label>
         <div
           className="category-filters"
           role="group"
@@ -56,49 +73,56 @@ export default function BlogIndex() {
                 setPage(1);
               }}
             >
-              {item}
+              <span>{item}</span>
+              <span className="topic-count">
+                {item === "Tümü"
+                  ? blogPosts.length
+                  : blogPosts.filter((post) => post.category === item).length}
+              </span>
             </button>
           ))}
         </div>
-      </div>
-      <div ref={gridRef} className="blog-grid">
-        <p className="blog-results" aria-live="polite">
-          {filtered.length} makale · {category} · Sayfa {page} / {totalPages}
-        </p>
-        <div className="articles-grid">
-          {posts.map((post) => (
-            <ArticleCard key={post.id} post={post} />
-          ))}
+      </aside>
+      <div className="publication-content">
+        <div ref={gridRef} className="blog-grid">
+          <p className="blog-results" aria-live="polite">
+            {filtered.length} makale · {category} · Sayfa {page} / {totalPages}
+          </p>
+          <div className="articles-grid">
+            {posts.map((post) => (
+              <ArticleCard key={post.id} post={post} />
+            ))}
+          </div>
         </div>
-      </div>
-      {totalPages > 1 && (
-        <nav className="pagination" aria-label="Makale sayfaları">
-          <button
-            aria-label="Önceki sayfa"
-            disabled={page === 1}
-            onClick={() => changePage(page - 1)}
-          >
-            <Icon name="previous" />
-          </button>
-          {Array.from({ length: totalPages }, (_, i) => (
+        {totalPages > 1 && (
+          <nav className="pagination" aria-label="Makale sayfaları">
             <button
-              key={i}
-              aria-label={`${i + 1}. sayfa`}
-              aria-current={page === i + 1 ? "page" : undefined}
-              onClick={() => changePage(i + 1)}
+              aria-label="Önceki sayfa"
+              disabled={page === 1}
+              onClick={() => changePage(page - 1)}
             >
-              {i + 1}
+              <Icon name="previous" />
             </button>
-          ))}
-          <button
-            aria-label="Sonraki sayfa"
-            disabled={page === totalPages}
-            onClick={() => changePage(page + 1)}
-          >
-            <Icon name="next" />
-          </button>
-        </nav>
-      )}
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                aria-label={`${i + 1}. sayfa`}
+                aria-current={page === i + 1 ? "page" : undefined}
+                onClick={() => changePage(i + 1)}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              aria-label="Sonraki sayfa"
+              disabled={page === totalPages}
+              onClick={() => changePage(page + 1)}
+            >
+              <Icon name="next" />
+            </button>
+          </nav>
+        )}
+      </div>
     </section>
   );
 }

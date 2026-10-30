@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageIntro from "../components/ui/PageIntro";
+import LegalNavigation from "../components/LegalNavigation";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/gizlilik/" },
@@ -17,6 +18,7 @@ export default function GizlilikPage() {
         description="Bu bilgilendirme, 6698 sayılı Kişisel Verilerin Korunması Kanunu 10. Maddesi gereğince yapılmaktadır."
       />
       <div className="container section-pad legal-reading">
+        <LegalNavigation active="/gizlilik/" />
         <article className="legal-document">
           <p>
             07.04.2016 tarihinde resmi gazetede yayınlanarak yürürlüğe giren

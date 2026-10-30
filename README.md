@@ -42,6 +42,8 @@ Ana sayfa ve Hakkımızda portresi `public/images/alideniz.png` dosyasını kull
 
 Ana sayfa ve çalışma alanları sunucu bileşenleriyle oluşturulur. Mobil menü, makale filtreleri ve sayfalama için istemci bileşenleri kullanılır. İletişim telefon, e-posta ve harita üzerinden sağlanır.
 
+Anasayfadaki ekran altı görseller `ScrollReveal` ile tek seferlik, hareket azaltma tercihine uyumlu geçiş kullanır. Genel yükleme ekranı yerine sayfa geçişlerinde ince ilerleme çubuğu gösterilir. Performans bulguları ve doğrulama sonuçları `docs/PERFORMANS-INCELEMESI.md` dosyasındadır.
+
 ## Ortam değişkenleri
 
 `.env.example` dosyasını `.env.local` adıyla kopyalayın. Varsayılan site adresi `https://adhukukvedanismanlik.com` olarak tanımlıdır. Farklı bir alan adına dağıtım yaparken `NEXT_PUBLIC_SITE_URL` değerini güncelleyin. Google doğrulama kodu isteğe bağlıdır.

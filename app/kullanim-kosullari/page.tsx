@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageIntro from "../components/ui/PageIntro";
+import LegalNavigation from "../components/LegalNavigation";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/kullanim-kosullari/" },
@@ -17,6 +18,7 @@ export default function TermsPage() {
         description="Bu internet sitesini ziyaret eden tüm kullanıcılar aşağıdaki şartları kabul etmiş sayılır."
       />
       <div className="container section-pad legal-reading">
+        <LegalNavigation active="/kullanim-kosullari/" />
         <article className="legal-document">
           <h2 className="text-2xl font-semibold text-gray-900">1) Kapsam</h2>
           <p>

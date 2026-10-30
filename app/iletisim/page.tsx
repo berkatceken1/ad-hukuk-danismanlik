@@ -21,6 +21,7 @@ export default function ContactPage() {
       >
         <div className="contact-page-grid">
           <div>
+            <p className="eyebrow contact-office-label">KAYSERİ OFİSİ</p>
             <h2>İletişim bilgileri</h2>
             <div className="contact-links">
               <a href={office.phoneHref}>
@@ -61,7 +62,14 @@ export default function ContactPage() {
               avukat–müvekkil ilişkisi oluşturmaz.
             </p>
           </div>
-          <aside className="office-panel" aria-labelledby="contact-hours-heading">
+          <aside
+            className="office-panel"
+            aria-labelledby="contact-hours-heading"
+          >
+            <p className="eyebrow contact-hours-label">
+              <Icon name="clock" />
+              ÇALIŞMA DÜZENİ
+            </p>
             <h2 id="contact-hours-heading">Çalışma saatleri</h2>
             <dl className="contact-schedule">
               {[office.hours, office.saturday, "Pazar: Kapalı"].map((entry) => {

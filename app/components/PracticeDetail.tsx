@@ -5,6 +5,7 @@ import { practiceDetails } from "../lib/practice-details";
 import { practicePresentation } from "../lib/presentation";
 import PageIntro from "./ui/PageIntro";
 import Icon from "./ui/Icon";
+import ConsultationBanner from "./ConsultationBanner";
 
 export default function PracticeDetail({ slug }: { slug: string }) {
   const area = areas.find((item) => item.slug === slug);
@@ -38,7 +39,10 @@ export default function PracticeDetail({ slug }: { slug: string }) {
               .map((item) => (
                 <Link key={item.slug} href={`/uzmanlik/${item.slug}`}>
                   <span className="practice-related-name">{item.title}</span>
-                  <span className="practice-related-direction" aria-hidden="true">
+                  <span
+                    className="practice-related-direction"
+                    aria-hidden="true"
+                  >
                     <Icon name="arrow" />
                   </span>
                 </Link>
@@ -46,6 +50,7 @@ export default function PracticeDetail({ slug }: { slug: string }) {
           </nav>
         </section>
       </div>
+      <ConsultationBanner />
     </div>
   );
 }
