@@ -35,13 +35,12 @@ npm start
 - `app/components/PracticeDetail.tsx`: çalışma alanlarının ortak sayfa şablonu.
 - `app/globals.css`: renk, tipografi, yerleşim ve ekran boyutu kuralları.
 - `app/sitemap.ts`, `app/robots.ts`: içerikle birlikte oluşturulan arama motoru dosyaları.
-- `docs/FOTOGRAF-DUZENLEME.md`: GPT Images portre çıktıları ve uygulanan talimatlar.
 
-Ana sayfa ve Hakkımızda portresi `public/images/alideniz.png` dosyasını kullanır. Önceki portreler kullanıcı tarafından kaldırılmıştır; fotoğraf düzenleme belgeleri yalnızca tasarım sürecinin geçmiş kaydıdır.
+Ana sayfa ve Hakkımızda portresi `public/images/alideniz.png` dosyasını kullanır. Önceki portreler kullanıcı tarafından kaldırılmıştır.
 
 Ana sayfa ve çalışma alanları sunucu bileşenleriyle oluşturulur. Mobil menü, makale filtreleri ve sayfalama için istemci bileşenleri kullanılır. İletişim telefon, e-posta ve harita üzerinden sağlanır.
 
-Anasayfadaki ekran altı görseller `ScrollReveal` ile tek seferlik, hareket azaltma tercihine uyumlu geçiş kullanır. Genel yükleme ekranı yerine sayfa geçişlerinde ince ilerleme çubuğu gösterilir. Performans bulguları ve doğrulama sonuçları `docs/PERFORMANS-INCELEMESI.md` dosyasındadır.
+Anasayfadaki ekran altı görseller `ScrollReveal` ile tek seferlik, hareket azaltma tercihine uyumlu geçiş kullanır. Genel yükleme ekranı yerine sayfa geçişlerinde ince ilerleme çubuğu gösterilir.
 
 ## Ortam değişkenleri
 
