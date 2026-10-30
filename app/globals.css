@@ -2570,7 +2570,8 @@ html { scrollbar-gutter: stable; }
   .home-page .office-introduction-image[data-reveal-state]::after {
     content: "";
     position: absolute;
-    inset: 0;
+    /* Kenarda alt piksel şeridi kalmasın. */
+    inset: -1px;
     z-index: 1;
     background: var(--surface);
     pointer-events: none;
@@ -3919,15 +3920,7 @@ main > .container.section-pad {
       animation-name: hero-caption-lift;
     }
 
-    /* 3. Pirinç çizgiler göründükçe soldan sağa çizilir. */
-    .eyebrow-line {
-      transform-origin: left center;
-      animation: line-draw linear both;
-      animation-timeline: view();
-      animation-range: entry 10% cover 30%;
-    }
-
-    /* 4. Büro fotoğrafı çerçevesinin içinde yavaşça kayar.
+    /* 3. Büro fotoğrafı çerçevesinin içinde yavaşça kayar.
        Bu animasyon, ScrollReveal'ın görsel yakınlaştırmasının yerini alır;
        perde efekti olduğu gibi kalır. */
     .home-page .office-introduction-image {
@@ -3940,7 +3933,7 @@ main > .container.section-pad {
       animation-range: cover;
     }
 
-    /* 5. İletişim satırları sırayla yerine oturur. */
+    /* 4. İletişim satırları sırayla yerine oturur. */
     .home-page .contact-links > a {
       animation: contact-row-in linear both;
       animation-timeline: view();
@@ -3981,10 +3974,6 @@ main > .container.section-pad {
 }
 @keyframes hero-caption-lift {
   to { transform: translateY(-24px); }
-}
-@keyframes line-draw {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
 }
 @keyframes office-photo-pan {
   from { transform: scale(1.1) translateY(-3%); }
