@@ -50,3 +50,16 @@ Ana sayfa beş bölümden oluşur: portreli tanıtım, kısa çalışma alanlar�
 ## Tipografi ve üst bar
 
 Google Fonts kaynakları incelenerek ekran için tasarlanan Lora ve sade Manrope eşleşmesi seçildi. Kaynaklar: https://github.com/google/fonts/blob/main/ofl/lora/DESCRIPTION.en_us.html ve https://github.com/google/fonts/blob/main/ofl/manrope/DESCRIPTION.en_us.html. Çalışma alanı kartlarındaki sıra numaraları kaldırıldı. Üst bardaki konum kaldırıldı; masaüstünde e-posta ve telefon, mobilde kısa E-posta etiketi ve telefon gösterilir.
+
+## Kaydırma efektleri (30 Ekim 2026)
+
+Sürekli efektler CSS kaydırma zaman çizelgeleriyle (`animation-timeline`) eklendi; JavaScript ve yeni paket yoktur. Kurallar `@supports (animation-timeline: scroll())` ve `prefers-reduced-motion: no-preference` içindedir; desteklemeyen tarayıcılarda (Firefox kararlı sürüm) sayfa sabit ve tamamen görünür kalır. Yalnızca transform, opacity ve ilk 160 px'de üst menü gölgesi canlandırılır.
+
+- Üst menü ilk 160 px'de gölgelenir, logo %86'ya küçülür.
+- Açılış bölümünden çıkarken metin hafifçe solar ve yükselir, portre içeride %5 büyür, isim kartı farklı hızda yükselir.
+- `eyebrow-line` çizgileri göründükçe soldan sağa çizilir.
+- Büro fotoğrafı çerçevesi içinde kayar; ScrollReveal perdesi korunur, görselin giriş yakınlaştırmasının yerini bu kayma alır.
+- Ana sayfaya `principles` verisinden üst üste binen (sticky) ilke kartları ve en sona `ContactSection` eklendi; iletişim satırları sırayla yerine oturur.
+- Makale sayfalarında üstte bordo okuma ilerleme çubuğu bulunur.
+
+Kaynaklar: https://www.paperstreet.com/blog/2026-law-firm-website-design-trends/ ve https://www.buildmvpfast.com/blog/css-scroll-driven-animations-replace-js-2026

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Çalışma Alanları",
   description:
     "AD Hukuk ve Danışmanlık çalışma alanları: ticaret, iş, aile, ceza, gayrimenkul, icra, miras ve diğer hukuki süreçler.",
-  alternates: { canonical: "/uzmanlik/" },
+  alternates: { canonical: "/calisma-alanlari/" },
 };
 
 export default function PracticePage() {

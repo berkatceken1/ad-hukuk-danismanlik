@@ -5,7 +5,7 @@ import { practiceDetails } from "../../lib/practice-details";
 export const metadata: Metadata = {
   title: "Aile Hukuku",
   description: practiceDetails["aile-hukuku"].intro,
-  alternates: { canonical: "/uzmanlik/aile-hukuku/" },
+  alternates: { canonical: "/calisma-alanlari/aile-hukuku/" },
 };
 
 export default function Page() {

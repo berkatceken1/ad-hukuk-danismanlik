@@ -18,14 +18,14 @@ export default function PracticeDetail({ slug }: { slug: string }) {
         eyebrow={area.title}
         title={area.title}
         description={content.intro}
-        parent={{ href: "/uzmanlik", label: "Çalışma Alanları" }}
+        parent={{ href: "/calisma-alanlari", label: "Çalışma Alanları" }}
         image={practicePresentation[slug]?.image}
       />
       <div className="container practice-detail-content">
         <section className="practice-related" aria-labelledby="related-heading">
           <div className="practice-related-heading">
             <h2 id="related-heading">Diğer çalışma alanları</h2>
-            <Link href="/uzmanlik">
+            <Link href="/calisma-alanlari">
               Tüm alanlar
               <Icon name="arrow" />
             </Link>
@@ -37,7 +37,7 @@ export default function PracticeDetail({ slug }: { slug: string }) {
             {areas
               .filter((item) => item.slug !== slug)
               .map((item) => (
-                <Link key={item.slug} href={`/uzmanlik/${item.slug}`}>
+                <Link key={item.slug} href={`/calisma-alanlari/${item.slug}`}>
                   <span className="practice-related-name">{item.title}</span>
                   <span
                     className="practice-related-direction"

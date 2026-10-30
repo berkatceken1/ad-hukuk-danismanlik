@@ -28,12 +28,9 @@ export default function PracticeGrid({
         <Link
           className="practice-overview-item"
           key={area.slug}
-          href={`/uzmanlik/${area.slug}`}
+          href={`/calisma-alanlari/${area.slug}`}
         >
-          <div
-            className="practice-overview-photo"
-            data-scroll-reveal={compact || undefined}
-          >
+          <div className="practice-overview-photo">
             <Image
               src={practicePresentation[area.slug].image}
               alt=""

@@ -53,14 +53,25 @@ const nextConfig: NextConfig = {
   // Redirects for SEO
   async redirects() {
     return [
+      // Hedefler eğik çizgiyle biter; trailingSlash ek bir yönlendirme eklemesin.
+      {
+        source: '/uzmanlik',
+        destination: '/calisma-alanlari/',
+        statusCode: 301,
+      },
+      {
+        source: '/uzmanlik/:path+',
+        destination: '/calisma-alanlari/:path+/',
+        statusCode: 301,
+      },
       {
         source: '/uzmanlik-alanlari',
-        destination: '/uzmanlik',
+        destination: '/calisma-alanlari/',
         permanent: true,
       },
       {
         source: '/hizmetler',
-        destination: '/uzmanlik',
+        destination: '/calisma-alanlari/',
         permanent: true,
       },
     ];

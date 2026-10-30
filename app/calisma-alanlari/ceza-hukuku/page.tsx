@@ -3,11 +3,11 @@ import PracticeDetail from "../../components/PracticeDetail";
 import { practiceDetails } from "../../lib/practice-details";
 
 export const metadata: Metadata = {
-  title: "İdare Hukuku",
-  description: practiceDetails["idare-hukuku"].intro,
-  alternates: { canonical: "/uzmanlik/idare-hukuku/" },
+  title: "Ceza Hukuku",
+  description: practiceDetails["ceza-hukuku"].intro,
+  alternates: { canonical: "/calisma-alanlari/ceza-hukuku/" },
 };
 
 export default function Page() {
-  return <PracticeDetail slug="idare-hukuku" />;
+  return <PracticeDetail slug="ceza-hukuku" />;
 }

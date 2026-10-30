@@ -9,12 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/hakkimda/",
-    "/uzmanlik/",
+    "/calisma-alanlari/",
     "/blog/",
     "/iletisim/",
     "/gizlilik/",
     "/kullanim-kosullari/",
-    ...areas.map((area) => `/uzmanlik/${area.slug}/`),
+    ...areas.map((area) => `/calisma-alanlari/${area.slug}/`),
     ...blogPosts.map((post) => `/blog/${post.id}/`),
   ];
   return routes.map((route) => ({ url: `${base}${route}` }));
