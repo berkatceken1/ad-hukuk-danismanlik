@@ -37,7 +37,7 @@ Tarih: 17 Ekim 2026
 
 ## Teslim
 
-Yerel önizleme üretim modunda hazırlanmıştır. Tasarım kararları `docs/TASARIM-PLANI.md`, çalışma komutları ve içerik kaynakları `README.md` içinde açıklanır. Masaüstü ve mobil ekran görüntüleri, takip edilmeyen `.cache/previews/` klasöründe tutulur.
+Yerel önizleme üretim modunda hazırlanmıştır. Çalışma komutları ve içerik kaynakları `README.md` içinde açıklanır. Masaüstü ve mobil ekran görüntüleri, takip edilmeyen `.cache/previews/` klasöründe tutulur.
 
 Bu rapor Chrome üzerinde yapılan kontrolleri kapsar. Otomatik bir erişilebilirlik veya performans puanı ölçümü içermez.
 

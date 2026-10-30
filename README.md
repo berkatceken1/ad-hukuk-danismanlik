@@ -35,7 +35,6 @@ npm start
 - `app/components/PracticeDetail.tsx`: çalışma alanlarının ortak sayfa şablonu.
 - `app/globals.css`: renk, tipografi, yerleşim ve ekran boyutu kuralları.
 - `app/sitemap.ts`, `app/robots.ts`: içerikle birlikte oluşturulan arama motoru dosyaları.
-- `docs/TASARIM-PLANI.md`: referans incelemesi, tasarım kararları ve kapsam.
 - `docs/FOTOGRAF-DUZENLEME.md`: GPT Images portre çıktıları ve uygulanan talimatlar.
 
 Ana sayfa ve Hakkımızda portresi `public/images/alideniz.png` dosyasını kullanır. Önceki portreler kullanıcı tarafından kaldırılmıştır; fotoğraf düzenleme belgeleri yalnızca tasarım sürecinin geçmiş kaydıdır.
